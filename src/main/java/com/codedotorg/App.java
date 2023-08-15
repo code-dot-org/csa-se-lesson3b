@@ -12,8 +12,8 @@ public class App extends Application {
 
     public void start(Stage primaryStage) {
         ArrayList<Product> products = Store.createStarterProducts();        
-        ShoppingCartApp cart = new ShoppingCartApp(products);
-        cart.startApp(primaryStage);
+        ShoppingCartApp cart = new ShoppingCartApp(primaryStage, 500, 500, products);
+        cart.startApp();
     }
 
 }

@@ -6,31 +6,64 @@ import javafx.scene.control.ListView;
 
 public class Store {
     
+    /** The list of products available at the store */
     private ArrayList<Product> products;
+
+    /** The list view that displays the products */
     private ListView<Product> productsListView;
 
+    /**
+     * Constructs a Store object with the given list of
+     * products and initializes the productsListView.
+     * 
+     * @param products the list of products to be added to the store
+     */
     public Store(ArrayList<Product> products) {
         this.products = products;
         this.productsListView = createProductsListView();
     }
 
+    /**
+     * Returns an ArrayList of all the products in the store.
+     *
+     * @return an ArrayList of Product objects representing the products in the store.
+     */
     public ArrayList<Product> getProducts() {
         return products;
     }
 
+    /**
+     * Returns the ListView of products.
+     *
+     * @return the ListView of products.
+     */
     public ListView<Product> getProductsListView() {
         return productsListView;
     }
 
+    /**
+     * Removes the selected product from the inventory.
+     * 
+     * @param selectedProduct the product to be removed from the inventory
+     */
     public void updateInventory(Product selectedProduct) {
         products.remove(selectedProduct);
     }
 
+    /**
+     * Updates the products list view by clearing the current
+     * items and adding all products to the list view.
+     */
     public void updateProductsListView() {
         productsListView.getItems().clear();
         productsListView.getItems().addAll(products);
     }
 
+    /**
+     * Creates an ArrayList of starter products with their names and prices.
+     * 
+     * @return ArrayList of Product objects
+     */
     public static ArrayList<Product> createStarterProducts() {
         ArrayList<Product> temp = new ArrayList<Product>();
 
@@ -58,6 +91,11 @@ public class Store {
         return temp;
     }
 
+    /**
+     * Creates a ListView of products.
+     *
+     * @return a ListView of Product objects
+     */
     private ListView<Product> createProductsListView() {
         ListView<Product> tempListView = new ListView<Product>();
         tempListView.getItems().addAll(products);
