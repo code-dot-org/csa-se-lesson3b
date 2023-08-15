@@ -60,7 +60,9 @@ public class ShoppingCartApp {
         window.setTitle("Binary Bazaar");
 
         VBox mainLayout = createMainLayout();
+
         Scene currentScene = new Scene(mainLayout, width, height);
+        currentScene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
 
         window.setScene(currentScene);
         window.show();

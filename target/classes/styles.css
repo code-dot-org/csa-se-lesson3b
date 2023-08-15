@@ -1,0 +1,49 @@
+/* Styling for the main VBox layout */
+.vbox {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20px;
+    -fx-border-radius: 10px;
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+}
+
+/* Styling for the total price label */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-background-color: #e6e6e6;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+}
+
+/* Styling for the buttons */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #fff;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Styling for the ListView of products and cart items */
+.listview {
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 250px; /* Adjust this according to the preferred size */
+}
+
+.listview .list-cell {
+    -fx-padding: 5px 10px;
+}
+
+.listview .list-cell:filled:selected, .listview .list-cell:filled:selected:hover {
+    -fx-background-color: #c1c1c1;
+    -fx-text-fill: #000;
+}
